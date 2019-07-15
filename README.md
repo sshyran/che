@@ -11,32 +11,59 @@ https://www.eclipse.org/che/. Next-generation container development platform, de
 ![Eclipse Che](https://www.eclipse.org/che/images/hero-technology-v2@2x.png "Eclipse Che")
 
 ### Getting Started
-You can run Che wherever Kubernetes runs - in the public cloud, a private cloud, or install it locally. The [step by step guide](https://eclipse.org/che/getting-started/) will get you going along with [our docs](https://www.eclipse.org/che/docs/).
+- Try Che live. *no installation required*: https://www.eclipse.org/che/getting-started/cloud/
+- Run Che on your own Kubernetes cluster: https://www.eclipse.org/che/docs/che-7/che-quick-starts.html#running-che-locally_che-quick-starts
 
 
-### Customizing
-Customizing Che could be done in several ways:
+### Customize Che for your projects and teams
+If your goal is to provide to your developers a Ready-to-code environment that completly fits
+your projects developer flows, you are in the right place:
 
-1. **Customize the dashboard for your team to start coding on your projects.**
-
-   Developers would access to the dashboard with your own devfiles to create on demand workspaces. Each devfile could have a deep level of customization:
+1. **Portable developer environment: Devfile**\
+   Devfiles provide the ability to create on demand developer environments.\
+   A devfile gives these powers:
     - Import any git projects
-    - Use plugins that you have coded or the ones available from the Che plugin registry or VSCode market place or your own hosted plugin registry.
-    - Include your build time or runtime containers, your kube native applications.
+    - Use plugins that you have coded or the ones available from the **Che plugin registry** or the **VSCode market place** or your own hosted plugin registry.
+    - Include your build time/runtime containers and your kube-native applications for building and testing production application in the inner loop.
     - Make available customized commands to build and run your projects.
-2. **Customize your own Che-theia editor with your own set of build in plugins and make it the default editor of your Che deployment.**
-3. **Customize and run your own editor instead of Che-Theia.**
+
+   To go further, you can follow this [hands-on guide](https://www.eclipse.org/che/docs/che-7/using-developer-environments-workspaces.html#starting-a-workspace-with-a-devfile_making-a-workspace-portable-using-a-devfile) to learn how to create a workspace based on a devfile.
+
+2. **Customize your developer environments with VSCode extensions.**\
+   Che-plugins are a combination of VSCode extension and a dedicated container image with all the system dependencies that an extension would require to work.
+Thus, a Che Java plugin is actually the VSCode Java extension + the container image with the right JDK, Maven and so on.\
+To go further, you can follow this [hands-on guide (TODO)]() to learn how to configure your containerized VSCode extension and include it in your devfile.
+
+3. **Customize the dashboard for your team to start coding on your projects.**\
+   Developers would access to the dashboard with your own devfiles to create on demand workspaces.\
+   To go further, you can follow this [hands-on guide (TODO)]() to learn how to set a custom devfile registry to provide Ready-to-code on-demand developer environment for your projects.
+
 
 
 ### Contributing
-New contributors, the labels [good first issue](https://github.com/eclipse/che/labels/good%20first%20issue)
+#### New contributors
+The labels [good first issue](https://github.com/eclipse/che/labels/good%20first%20issue)
 and [help wanted](https://github.com/eclipse/che/labels/help%20wanted) are for issues and pull request that new contributors can start with. They will appear in the https://github.com/eclipse/che/contribute page.
+
+#### Repositories
+Che is composed of multiple sub projects. For each projects we provide a *CONTRIBUTE.md* file describing how to setup the development environment to start your contribution. Most of the time, we encourage you to use Che to contribute to Che.
+
+- [eclipse/che](https://github.com/eclipse/che): main project repository
+   - Che master: orchestrate the che workspaces with devfiles on Kubernetes
+   - Che dashboard
+   - Che main container images
+   - End2end test
+- [che-theia](https://github.com/eclipse/che-theia): Theia IDE integrated in Che.
+- [chectl](https://github.com/che-incubator/chectl): The CLI to install Che, create and start workspaces and devfiles
+- [che-plugin-registry]()
+- [che-devfile-registry](https://github.com/eclipse/che-devfile-registry)
+- [redhat-developer/devfile](https://github.com/redhat-developer/devfile): Contribute to the devfile documentation: https://redhat-developer.github.io/devfile/
+
 
 If you are interested in fixing issues and contributing directly to the code base, please see [How to Contribute](https://github.com/eclipse/che/wiki/How-To-Contribute). It covers:
 - [Submitting bugs](https://github.com/eclipse/che/wiki/Submitting-Bugs-and-Suggestions)
-- [Development workflow](https://github.com/eclipse/che/wiki/Development-Workflow)
-- [Coding guidelines](https://github.com/eclipse/che/wiki/Coding-Guidelines)
 - [Contributor license agreement](https://github.com/eclipse/che/wiki/Eclipse-Contributor-Agreement)
+
 
 The `che` repository is where we do development and there are many ways you can participate, for example:
 
@@ -44,22 +71,6 @@ The `che` repository is where we do development and there are many ways you can 
 - Review [source code changes](https://github.com/eclipse/che/pulls)
 - [Improve docs](https://github.com/eclipse/che-docs)
 
-
-### Ecosystem
-The next generation of Eclipse Che is going to be built from multiple components and plugins (learn more in [the roadmap](https://github.com/eclipse/che/wiki/Roadmap) on the wiki). This list provides links to those components and technologies underneath Che.
-
-| Project        | Description  |
-| ----------- |-----|
-| [Che-Theia](https://github.com/eclipse/che-theia) | Theia IDE integrated in Che.  |
-| [chectl](https://github.com/che-incubator/chectl) | The CLI to install Che, create and start workspaces and devfiles |
-| [Devfile](https://redhat-developer.github.io/devfile/) | The way to do DWaC (Developer Workspace as Code) |
-| [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) | The protocol used between an editor or IDE and a language server that provides language features like auto complete, go to definition, find all references etc.|
-| [Kubernetes]() | Kubernetes (K8s) is an open-source system for automating deployment, scaling, and management of containerized applications. |
-
-#### Languages Support
-Languages support is covered thanks to the Language Server Protocol but Che is going beyond that. Che-plugins are a combination of VSCode extension and a dedicated container image with all the system dependencies that an extension would require to work.
-Thus, a Che Java plugin is actually the VSCode Java extension + the container image with the right JDK, Maven and so on.
-Checkout our [plugin registry](https://github.com/eclipse/che-plugin-registry/tree/master/v3/plugins/) for Language plugins ... and not only!
 
 ### Feedback
 * **Support:** You can ask questions, report bugs, and request features using [GitHub issues](https://github.com/eclipse/che/issues).
