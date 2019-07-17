@@ -117,12 +117,12 @@ suite('Language server validation', async () => {
         await ide.waitStatusBarTextAbsence('Building workspace', 360000);
     });
 
-    test('Error highlighting', async () => {
-        await editor.type(javaFileName, 'textForErrorHighlighting', 30);
-        await editor.waitErrorInLine(30);
-        await editor.performKeyCombination(javaFileName, Key.chord(Key.CONTROL, 'z'));
-        await editor.waitErrorInLineDisappearance(30);
-    });
+    // test('Error highlighting', async () => {
+    //     await editor.type(javaFileName, 'textForErrorHighlighting', 30);
+    //     await editor.waitErrorInLine(30);
+    //     await editor.performKeyCombination(javaFileName, Key.chord(Key.CONTROL, 'z'));
+    //     await editor.waitErrorInLineDisappearance(30);
+    // });
 
     test('Autocomplete', async () => {
         await editor.moveCursorToLineAndChar(javaFileName, 32, 17);
