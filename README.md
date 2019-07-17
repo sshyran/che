@@ -28,6 +28,7 @@ https://www.eclipse.org/che/)
 - [**Roadmap**](#roadmap)
 - [**License**](#license)
 
+---
 
 ### Getting Started
 Here you can find links on how to get started with Eclipse Che:
