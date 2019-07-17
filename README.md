@@ -5,8 +5,6 @@ https://www.eclipse.org/che/)
 
 **Next-generation container development platform, developer workspace server and cloud IDE**
 
----
-
 [![Eclipse License](https://img.shields.io/badge/license-Eclipse-brightgreen.svg)](https://github.com/codenvy/che/blob/master/LICENSE)
 [![Build Status](https://ci.codenvycorp.com/buildStatus/icon?job=che-master-ci)](https://ci.codenvycorp.com/job/che-master-ci)
 <a href="https://sonarcloud.io/dashboard?id=org.eclipse.che%3Ache-parent%3Amaster">
@@ -17,9 +15,11 @@ https://www.eclipse.org/che/)
 
 </div>
 
-**Visit website at: https://www.eclipse.org/che/** and documentation at: https://www.eclipse.org/che/docs
-
 ![Eclipse Che](https://www.eclipse.org/che/images/hero-technology-v2@2x.png "Eclipse Che")
+
+---
+
+**Visit website at: https://www.eclipse.org/che/** and documentation at: https://www.eclipse.org/che/docs
 
 - [**Getting Started**](#getting-started)
 - [**Using Eclipse Che**](#using-eclipse-che)
