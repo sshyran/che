@@ -44,12 +44,12 @@ Here you can find references to useful documentation and hands-on guides to lear
 
 
 ### Feedback and Community
-We love to hear from users and developers, here are the various ways to get in touch with us:
+We love to hear from users and developers. Here are the various ways to get in touch with us:
 * **Support:** You can ask questions, report bugs, and request features using [GitHub issues](https://github.com/eclipse/che/issues).
 * **Public Chat:** Join the public [eclipse-che](https://mattermost.eclipse.org/eclipse/channels/eclipse-che) Mattermost channel to discuss with community and contributors.
-* **Twitter:** 
-* **Mailing List:** 
-* **Weekly Meetings:** Join us in our [Che community meeting](https://github.com/eclipse/che/wiki/Che-Dev-Meetings) every second monday. 
+* **Twitter:** [@eclipse_che](https://twitter.com/eclipse_che)
+* **Mailing List:** [che-dev@eclipse.org](https://accounts.eclipse.org/mailing-list/che-dev)
+* **Weekly Meetings:** Join us in our [Che community meeting](https://github.com/eclipse/che/wiki/Che-Dev-Meetings) every second monday.
 
 
 ### Contributing
@@ -66,24 +66,28 @@ The labels [good first issue](https://github.com/eclipse/che/labels/good%20first
 and [help wanted](https://github.com/eclipse/che/labels/help%20wanted) are for issues and pull request that new contributors can start with. They will appear in the https://github.com/eclipse/che/contribute page.
 
 
-#### Repositories
+#### Architecture and Repositories
+[Get familiar with Che architecture.(to be provided soon)]()
+
 Che is composed of multiple sub projects. For each projects we provide a *CONTRIBUTE.md* file describing how to setup the development environment to start your contribution. Most of the time, we encourage you to use Che to contribute to Che.
 
-- [eclipse/che](https://github.com/eclipse/che): main project repository
-   - Che master: orchestrate the che workspaces with devfiles on Kubernetes
-   - Che dashboard
-   - Che main container images
-   - End2end test
+- [eclipse/che](https://github.com/eclipse/che) (this repository) is the main project repository that contains:
+   - Che master: orchestrates the che workspaces with devfiles on Kubernetes
+   - Che dashboard: UI to manage workspaces, devfiles, etc.
+   - Che main container images: source code, dockerfiles to build our main docker images. Note that Che-theia related dockerfiles are located in che-theia repo.
+   - End2end test: source code of our integration tests.
 - [che-theia](https://github.com/eclipse/che-theia): Theia IDE integrated in Che.
 - [chectl](https://github.com/che-incubator/chectl): The CLI to install Che, create and start workspaces and devfiles
-- [che-plugin-registry]()
-- [che-devfile-registry](https://github.com/eclipse/che-devfile-registry)
+- [che-plugin-registry](https://github.com/eclipse/che-plugin-registry): The default set of che plugins (vscode extension + containers) or editors that could be installed on any Che workspaces.
+- [che-devfile-registry](https://github.com/eclipse/che-devfile-registry): The default set of devfiles that would be made available on the Che dashboard stacks.
 - [redhat-developer/devfile](https://github.com/redhat-developer/devfile): Contribute to the devfile documentation: https://redhat-developer.github.io/devfile/
 
 
 #### Extending Eclipse Che
-- sample extending use cases : point to doc link
 
+- [Package your favorite VSCode extensions and make them available in Che.(to be provided soon)]()
+- [Write your own VSCode extension that runs on a dedicated side car container.(to be provided soon)]()
+- [Build and package your custom Che-Theia editor with your extensions and plugins.(to be provided soon)]()
 
 ### Roadmap
 We maintain the [Che roadmap](https://github.com/eclipse/che/wiki/Roadmap) in the open way. We welcome anyone to ask question and contribute to the roadmap by joining our [community meetings](https://github.com/eclipse/che/wiki/Che-Dev-Meetings).
