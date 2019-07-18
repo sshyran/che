@@ -53,7 +53,7 @@ We love to hear from users and developers. Here are the various ways to get in t
 
 
 ### Contributing
-If you are interested in fixing issues and contributing directly to the code base, please see [How to Contribute](https://github.com/eclipse/che/wiki/How-To-Contribute). It covers:
+If you are interested in fixing issues and contributing directly to the code base:
 - :bug: [Submitting bugs](https://github.com/eclipse/che/wiki/Submitting-Bugs-and-Suggestions)
 - :page_facing_up: [Contributor license agreement](https://github.com/eclipse/che/wiki/Eclipse-Contributor-Agreement)
 - :checkered_flag: Development workflow: [Che dashboard (to be provided soon)](), [chectl (to be provided soon)](), [wsmaster (to be provided soon)](), [che-theia](https://github.com/eclipse/che-theia/blob/master/CONTRIBUTING.md)
