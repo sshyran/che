@@ -1,3 +1,5 @@
+:building_construction:
+
 <div id="header" align="center">
 
 [![Eclipse Che - Eclipse Next-Generation IDE](https://raw.githubusercontent.com/eclipse/che/assets/eclipseche.png)](
@@ -56,7 +58,7 @@ We love to hear from users and developers. Here are the various ways to get in t
 If you are interested in fixing issues and contributing directly to the code base, please see [How to Contribute](https://github.com/eclipse/che/wiki/How-To-Contribute). It covers:
 - :bug: [Submitting bugs](https://github.com/eclipse/che/wiki/Submitting-Bugs-and-Suggestions)
 - :page_facing_up: [Contributor license agreement](https://github.com/eclipse/che/wiki/Eclipse-Contributor-Agreement)
-- :construction: Development workflow
+- :checkered_flag: Development workflow
    - [Che dashboard (to be provided soon)]()
    - [chectl (to be provided soon)]()
    - [wsmaster (to be provided soon)]()
