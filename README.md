@@ -56,7 +56,11 @@ We love to hear from users and developers. Here are the various ways to get in t
 If you are interested in fixing issues and contributing directly to the code base, please see [How to Contribute](https://github.com/eclipse/che/wiki/How-To-Contribute). It covers:
 - [Submitting bugs](https://github.com/eclipse/che/wiki/Submitting-Bugs-and-Suggestions)
 - [Contributor license agreement](https://github.com/eclipse/che/wiki/Eclipse-Contributor-Agreement)
-- [Development workflow]()
+- Development workflow
+   - [Che dashboard (to be provided soon)]()
+   - [chectl (to be provided soon)]()
+   - [wsmaster (to be provided soon)]()
+   - [che-theia](https://github.com/eclipse/che-theia/blob/master/CONTRIBUTING.md)
 - Review [source code changes](https://github.com/eclipse/che/pulls)
 - [Improve docs](https://github.com/eclipse/che-docs)
 
@@ -84,7 +88,7 @@ Che is composed of multiple sub projects. For each projects we provide a *CONTRI
 
 
 #### Extending Eclipse Che
-
+- [Add a new language support. (to be provided soon)]()
 - [Package your favorite VSCode extensions and make them available in Che.(to be provided soon)]()
 - [Write your own VSCode extension that runs on a dedicated side car container.(to be provided soon)]()
 - [Build and package your custom Che-Theia editor with your extensions and plugins.(to be provided soon)]()
