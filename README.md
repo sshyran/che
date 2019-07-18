@@ -54,15 +54,15 @@ We love to hear from users and developers. Here are the various ways to get in t
 
 ### Contributing
 If you are interested in fixing issues and contributing directly to the code base, please see [How to Contribute](https://github.com/eclipse/che/wiki/How-To-Contribute). It covers:
-- [Submitting bugs](https://github.com/eclipse/che/wiki/Submitting-Bugs-and-Suggestions)
-- [Contributor license agreement](https://github.com/eclipse/che/wiki/Eclipse-Contributor-Agreement)
-- Development workflow
+- :bug: [Submitting bugs](https://github.com/eclipse/che/wiki/Submitting-Bugs-and-Suggestions)
+- :page_facing_up: [Contributor license agreement](https://github.com/eclipse/che/wiki/Eclipse-Contributor-Agreement)
+- :construction: Development workflow
    - [Che dashboard (to be provided soon)]()
    - [chectl (to be provided soon)]()
    - [wsmaster (to be provided soon)]()
    - [che-theia](https://github.com/eclipse/che-theia/blob/master/CONTRIBUTING.md)
-- Review [source code changes](https://github.com/eclipse/che/pulls)
-- :pencil:[Improve docs](https://github.com/eclipse/che-docs)
+- :ok_hand: Review [source code changes](https://github.com/eclipse/che/pulls)
+- :pencil: [Improve docs](https://github.com/eclipse/che-docs)
 
 
 #### New contributors
