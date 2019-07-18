@@ -62,7 +62,7 @@ If you are interested in fixing issues and contributing directly to the code bas
    - [wsmaster (to be provided soon)]()
    - [che-theia](https://github.com/eclipse/che-theia/blob/master/CONTRIBUTING.md)
 - Review [source code changes](https://github.com/eclipse/che/pulls)
-- [Improve docs](https://github.com/eclipse/che-docs)
+- :pencil:[Improve docs](https://github.com/eclipse/che-docs)
 
 
 #### New contributors
