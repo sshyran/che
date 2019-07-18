@@ -63,7 +63,6 @@ If you are interested in fixing issues and contributing directly to the code bas
 - :sparkles: [Good first issue for new contributors](https://github.com/eclipse/che/wiki/Labels#new-contributors)
 
 #### Repositories
-[Get familiar with Che architecture.(to be provided soon)]()
 
 Che is composed of multiple sub projects. For each projects we provide a *CONTRIBUTE.md* file describing how to setup the development environment to start your contribution. Most of the time, we encourage you to use Che to contribute to Che.
 
