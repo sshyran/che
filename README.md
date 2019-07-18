@@ -59,14 +59,10 @@ If you are interested in fixing issues and contributing directly to the code bas
 - :checkered_flag: Development workflow: [Che dashboard (to be provided soon)](), [chectl (to be provided soon)](), [wsmaster (to be provided soon)](), [che-theia](https://github.com/eclipse/che-theia/blob/master/CONTRIBUTING.md)
 - :ok_hand: Review [source code changes](https://github.com/eclipse/che/pulls)
 - :pencil: [Improve docs](https://github.com/eclipse/che-docs)
+- :building_construction: [Che architecture (to be provided soon)]()
+- :sparkles: [Good first issue for new contributors](https://github.com/eclipse/che/wiki/Labels#new-contributors)
 
-
-#### New contributors
-The labels [good first issue](https://github.com/eclipse/che/labels/good%20first%20issue)
-and [help wanted](https://github.com/eclipse/che/labels/help%20wanted) are for issues and pull request that new contributors can start with. They will appear in the https://github.com/eclipse/che/contribute page.
-
-
-#### Architecture and Repositories
+#### Repositories
 [Get familiar with Che architecture.(to be provided soon)]()
 
 Che is composed of multiple sub projects. For each projects we provide a *CONTRIBUTE.md* file describing how to setup the development environment to start your contribution. Most of the time, we encourage you to use Che to contribute to Che.
