@@ -13,6 +13,8 @@
 import {CheWorkspace} from '../../../components/api/workspace/che-workspace.factory';
 import {DevfileRegistry, IDevfileMetaData} from '../../../components/api/devfile-registry.factory';
 
+const DEFAULT_COLUMN = 'displayName';
+
 /**
  * @ngdoc controller
  * @name stacks.list.controller:ListStacksCtrl
@@ -25,16 +27,20 @@ export class ListStacksController {
   static $inject = ['$location', '$scope', 'cheWorkspace', 'devfileRegistry', 'cheListHelperFactory'];
 
   private $location: ng.ILocationService;
-  private devfileRegistry: DevfileRegistry;
+
   private cheWorkspace: CheWorkspace;
+  private devfileRegistry: DevfileRegistry;
   private cheListHelper: che.widget.ICheListHelper;
 
+  private orderBy: string;
+  private sortVal: string;
+  private searchStr: string;
+  private appliedColumn: string;
   private devfileContent: string;
   private pluginRegistryUrl: string;
-  private orderBy: string;
-  private searchStr: string;
 
   private isLoading: boolean;
+  private isApplyColumnChanges: boolean;
 
   /**
    * Default constructor that is using resource
@@ -50,7 +56,10 @@ export class ListStacksController {
       cheListHelperFactory.removeHelper(helperId);
     });
 
-    this.orderBy = 'displayName';
+    this.orderBy = DEFAULT_COLUMN;
+
+    this.appliedColumn = DEFAULT_COLUMN;
+    this.isApplyColumnChanges = false;
 
     this.loadDevfiles();
   }
@@ -69,21 +78,31 @@ export class ListStacksController {
 
   onSearchChanged(str: string): void {
     this.searchStr = str
-    this.onOrderByChanged();
+    this.updateFilters();
   }
 
   onOrderByChanged(): void {
-    this.cheListHelper.clearFilters();
-    let filter =  {};
-    if (this.searchStr) {
-      filter[this.orderBy] = this.searchStr;
+    if (!this.isApplyColumnChanges) {
+      this.orderBy = this.sortVal;
+      return;
     }
-    this.cheListHelper.applyFilter(this.orderBy, filter);
+    this.appliedColumn = this.sortVal.replace(/^-/, '');
+    this.sortVal = this.orderBy;
+    this.updateFilters();
   }
 
   onDevfileSelected(devfile: IDevfileMetaData): void {
     if (devfile.links && devfile.links.self) {
       this.$location.path(`/stack/${this.devfileRegistry.selfLinkToDevfileId(devfile.links.self)}`).search({});
     }
+  }
+
+  private updateFilters(): void {
+    this.cheListHelper.clearFilters();
+    let filter =  {};
+    if (this.searchStr) {
+      filter[this.appliedColumn] = this.searchStr;
+    }
+    this.cheListHelper.applyFilter(this.appliedColumn, filter);
   }
 }

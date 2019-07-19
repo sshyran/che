@@ -19,35 +19,45 @@
 <md-content md-scroll-y flex layout="column" md-theme="maincontent-theme" class=stacks-list-content>
   <md-progress-linear md-mode="indeterminate" class="stacks-list-progress"
                       ng-show="listStacksController.isLoading"></md-progress-linear>
+  <div class="apply-filter-to-selected-column che-list-item-checkbox"
+       uib-tooltip="Choosing a column to apply a filtering"
+       tooltip-append-to-body="true">
+    <md-checkbox aria-label="Apply filter to the selected column"
+                 ng-model="listStacksController.isApplyColumnChanges"</md-checkbox>
+  </div>
   <che-list-header che-input-placeholder="Search"
                    che-search-model="listStacksController.stackFilter.name"
                    che-on-search-change="listStacksController.onSearchChanged(str)"
                    che-hide-delete="true">
-          <div flex="100"
-               layout="row" layout-align="start stretch"
-               class="che-list-item-row">
-            <div flex layout="row"
-                 layout-align="start center"
-                 class="che-list-item-details">
-              <che-list-header-column class="devfile-selector-icon-column"
-                                      che-column-title=""></che-list-header-column>
-              <che-list-header-column flex="25"
-                                      che-sort-value="listStacksController.orderBy"
-                                      che-sort-item="displayName"
-                                      on-sort-change="listStacksController.onOrderByChanged()"
-                                      che-column-title="Name"></che-list-header-column>
-              <che-list-header-column flex="50"
-                                      che-sort-value="listStacksController.orderBy"
-                                      che-sort-item="description"
-                                      on-sort-change="listStacksController.onOrderByChanged()"
-                                      che-column-title="Description"></che-list-header-column>
-              <che-list-header-column flex="10"
-                                      che-sort-value="listStacksController.orderBy"
-                                      che-sort-item="globalMemoryLimit"
-                                      on-sort-change="listStacksController.onOrderByChanged()"
-                                      che-column-title="Required memory"></che-list-header-column>
-            </div>
-          </div>
+    <div flex="100"
+         layout="row" layout-align="start stretch"
+         class="che-list-item-row">
+      <div flex layout="row"
+           layout-align="start center"
+           class="che-list-item-details"
+           ng-class="{'apply-column-changes': listStacksController.isApplyColumnChanges}">
+        <che-list-header-column class="devfile-selector-icon-column"
+                                che-column-title=""></che-list-header-column>
+        <che-list-header-column flex="25"
+                                che-sort-value="listStacksController.sortVal"
+                                che-sort-item="displayName"
+                                on-sort-change="listStacksController.onOrderByChanged()"
+                                ng-class="{'applied-column': listStacksController.appliedColumn === 'displayName'}"
+                                che-column-title="Name"></che-list-header-column>
+        <che-list-header-column flex="50"
+                                che-sort-value="listStacksController.sortVal"
+                                che-sort-item="description"
+                                on-sort-change="listStacksController.onOrderByChanged()"
+                                ng-class="{'applied-column': listStacksController.appliedColumn === 'description'}"
+                                che-column-title="Description"></che-list-header-column>
+        <che-list-header-column flex="10"
+                                che-sort-value="listStacksController.sortVal"
+                                che-sort-item="globalMemoryLimit"
+                                on-sort-change="listStacksController.onOrderByChanged()"
+                                ng-class="{'applied-column': listStacksController.appliedColumn === 'globalMemoryLimit'}"
+                                che-column-title="Required memory"></che-list-header-column>
+      </div>
+    </div>
    </che-list-header>
       </div>
     </div>
